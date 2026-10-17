@@ -830,7 +830,7 @@ export default function App() {
     return () => document.removeEventListener('mousedown', handler);
   }, [pendingDeleteIdx]);
 
-  // Phones/tablets (coarse pointer) get ChatGPT-mobile behaviour: the keyboard
+  // Phones/tablets (coarse pointer) use mobile input behaviour: the keyboard
   // Enter key inserts a newline, and only the on-screen Send button sends.
   const isMobile = useMemo(
     () => typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches,
@@ -882,8 +882,8 @@ export default function App() {
     }
   };
 
-  // ChatGPT-style: follow the stream, but release the moment the user scrolls
-  // up. Re-engage automatically once they're back near the bottom.
+  // Follow the stream, but release the moment the user scrolls up. Re-engage
+  // automatically once they're back near the bottom.
   const handleScroll = () => {
     const el = scrollContainerRef.current;
     if (el) {
