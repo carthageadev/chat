@@ -153,13 +153,11 @@ Character control rules (strict):
 - NEVER speak, act, think, or decide anything on behalf of {{user}}.
 - Never write {{user}}'s dialogue or actions; always leave room for them to respond.`;
 
-const TITLE_MODEL = 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning';
+const TITLE_MODEL = 'nvidia/nemotron-3.5-super-vl-120b-a12b';
 const MODELS = [
-  { id: 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning', label: 'Nemotron 3 Nano', reasoningToggle: true },
+  { id: 'nvidia/nemotron-3.5-super-vl-120b-a12b', label: 'Nemotron 3.5 Super VL', reasoningToggle: true },
   { id: 'poolside/laguna-xs-2.1', label: 'Laguna 2.1 XS', reasoningToggle: true },
-  { id: 'openai/gpt-oss-20b', label: 'GPT-OSS' },
   { id: 'turboderp/Qwen3.8-27B-exl3', label: 'Qwen 3.8', baseUrl: 'https://qwen.ai.unturf.com/v1', reasoningToggle: true },
-  { id: 'moonshotai/kimi-k3', label: 'Kimi K3', reasoningToggle: true },
 ];
 
 interface Message {

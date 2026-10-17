@@ -107,7 +107,7 @@ export function buildRequestBody(opts: {
 
   // Unified "reasoning off" switch for the models that use reasoning_effort.
   // (poolside/nemotron use enable_thinking above.)
-  if (opts.reasoningOff && (model.startsWith('Lorbus/') || model.startsWith('moonshotai/'))) {
+  if (opts.reasoningOff && model.startsWith('Lorbus/')) {
     body.reasoning_effort = 'none';
   }
 
